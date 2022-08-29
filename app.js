@@ -76,10 +76,6 @@ prevBtn.addEventListener("click", function () {
 
 // CHALLENGE: SHOW RANDOM PERSON
 randomBtn.addEventListener("click", function () {
-  const randomPerson = Math.floor(Math.random() * 4);
-  console.log(randomPerson);
-  if (randomPerson == currentPerson) {
-    currentPerson;
-  }
+  currentPerson = Math.floor(Math.random() * reviews.length);
   showPerson(currentPerson);
 });

@@ -37,7 +37,7 @@ const job = document.getElementById("job");
 const info = document.getElementById("info");
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
-const randombtn = document.querySelector(".random-btn");
+const randomBtn = document.querySelector(".random-btn");
 
 // START STARTING PROFILE
 let currentPerson = 0;
@@ -70,6 +70,16 @@ prevBtn.addEventListener("click", function () {
   currentPerson--;
   if (currentPerson < 0) {
     currentPerson = reviews.length - 1;
+  }
+  showPerson(currentPerson);
+});
+
+// CHALLENGE: SHOW RANDOM PERSON
+randomBtn.addEventListener("click", function () {
+  const randomPerson = Math.floor(Math.random() * 4);
+  console.log(randomPerson);
+  if (randomPerson == currentPerson) {
+    currentPerson;
   }
   showPerson(currentPerson);
 });
